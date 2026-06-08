@@ -55,9 +55,6 @@ Backend API:
 http://localhost:8000
 
 
-# Endpoints
-
-
 # Demo Accounts
  Demo accounts are automatically created during aplication startup
 ## Admin
