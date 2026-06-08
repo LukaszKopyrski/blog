@@ -1,0 +1,35 @@
+services:
+  frontend:
+    build:
+      context: ./blog
+      dockerfile: Dockerfile
+    command: npm run serve -- --host 0.0.0.0 --port 8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./blog:/app
+      - node_modules:/app/node_modules
+
+    environment:
+      - NODE_ENV=development
+  
+  backend:
+    build:
+      context: ./blogbe
+      dockerfile: Dockerfile
+    command: >
+      sh -c "
+      python3 manage.py migrate --noinput &&
+      python3 manage.py demo &&
+      python3 manage.py runserver 0.0.0.0:8000
+      "
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./blogbe:/app
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=${SECRET_KEY}
+
+volumes:
+  node_modules:
