@@ -39,7 +39,7 @@ Fullstack webapp built with Vue 3, Django REST Framework
 # Run locally
 
 ## 1. Clone repository
-git clone 
+git clone https://github.com/LukaszKopyrski/blog.git
 ## 2. Enter project directory
 cd blog
 ## 3. Build and run containers
