@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'change-in-production')
+SECRET_KEY = os.getenv('SECRET_KEY') or 'change-in-production'
 
 DEBUG = os.getenv("DEBUG", "True").strip().lower() in ("true", "1", "yes", "on")
 if not DEBUG:
