@@ -56,7 +56,7 @@ http://localhost:8000
 
 
 # Demo Accounts
- Demo accounts are automatically created during aplication startup
+ Demo accounts are automatically created during application startup
 ## Admin
 
 email: 
@@ -114,7 +114,7 @@ This is a local demo project intended for testing purposes.
 
 Please do not use real personal information.
 
-All data is stored locally on your machine and is not hosted or transmitted to any external server.
+All data is stored locally on your machine and is not hosted or transmitted to any external servers.
 
 Demo account credentials are available in this README file.
 
